@@ -29,7 +29,7 @@ steps:
 
 - script: 'yarn install'
 
-- script: 'yarn global add react-native-cli'
+- script: 'yarn add react-native-cli'
 
 - task: ChocoInstallPackage@1
   inputs:
