@@ -27,9 +27,10 @@ steps:
     VersionNumber: '$(Build.BuildNumber)'
     InjectVersion: true
 
-- script: 'yarn install'
-
-- script: 'npm config set prefix <C:\Users\VssAdministrator\AppData\Roaming\npm> | npm install -g react-native-cli'
+- script: | 
+    yarn install
+    npm config set prefix <C:\Users\VssAdministrator\AppData\Roaming\npm> 
+    npm install -g react-native-cli
 
 - task: ChocoInstallPackage@1
   inputs:
