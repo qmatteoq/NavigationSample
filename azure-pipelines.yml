@@ -28,7 +28,7 @@ steps:
     InjectVersion: true
 
 - script: yarn install
-- script: npm config set prefix C:\Users\VssAdministrator\AppData\Roaming\npm>
+- script: npm config set prefix C:\Users\VssAdministrator\AppData\Roaming\npm
 - script: npm install -g react-native-cli
 
 - task: ChocoInstallPackage@1
