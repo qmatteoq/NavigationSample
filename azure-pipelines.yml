@@ -31,6 +31,10 @@ steps:
 
 - script: 'yarn global add react-native-cli'
 
+- task: ChocoInstallPackage@1
+  inputs:
+    packageId: 'windows-sdk-10-version-1903-all'
+
 - task: NuGetCommand@2
   inputs:
     command: 'restore'
