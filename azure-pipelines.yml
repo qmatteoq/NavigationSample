@@ -29,7 +29,7 @@ steps:
 
 - script: 'yarn install'
 
-- script: 'yarn add react-native-cli'
+- script: 'npm config set prefix <C:\Users\VssAdministrator\AppData\Roaming\npm> | npm install -g react-native-cli'
 
 - task: ChocoInstallPackage@1
   inputs:
