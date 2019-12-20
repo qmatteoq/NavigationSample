@@ -1,0 +1,55 @@
+# Universal Windows Platform
+# Build a Universal Windows Platform project using Visual Studio.
+# Add steps that test and distribute an app, save build artifacts, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+# pool: Default
+pool:
+    vmImage: 'vs2017-win2016'
+
+variables:
+  solution: 'windows/NavigationSample.sln'
+  buildPlatform: 'x64'
+  buildConfiguration: 'Release'
+  appxPackageDir: '$(build.artifactStagingDirectory)\AppxPackages\\'
+
+name: $(date:yyyy).$(Month)$(rev:.r).0
+
+steps:
+
+- task: VersionAPPX@2
+  displayName: 'Version MSIX'
+  inputs:
+    Path: '$(Build.SourcesDirectory)'
+    VersionNumber: '$(Build.BuildNumber)'
+    InjectVersion: true
+
+- task: UseNode@1
+  inputs:
+    version: '12.9.1'
+
+- script: choco install windows-sdk-10-version-1903-all
+- script: yarn install
+- script: npm config set prefix C:\Users\VssAdministrator\AppData\Roaming\npm
+- script: npm install -g react-native-cli
+
+- task: NuGetCommand@2
+  inputs:
+    command: 'restore'
+    restoreSolution: 'windows/*.sln'
+    feedsToUse: 'select'
+
+- task: VSBuild@1
+  inputs:
+    solution: '$(solution)'
+    msbuildArgs: '/p:AppxBundlePlatforms="$(buildPlatform)" /p:AppxPackageDir="$(appxPackageDir)" /p:AppxBundle=Never /p:UapAppxPackageBuildMode=SideloadOnly /p:AppxPackageSigningEnabled=false'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(appxPackageDir)'
+    ArtifactName: 'drop'
