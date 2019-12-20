@@ -9,7 +9,7 @@
  <Identity
     Name="ReactNativeSample"
     Publisher="CN=Matteo Pagani, O=Matteo Pagani, L=Como, S=Como, C=IT"
-    Version="1.0.0.0" />
+    Version="1.0.1.0" />
 
   <mp:PhoneIdentity PhoneProductId="d80419c0-c379-4170-b02e-2465bd6d48a1" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 

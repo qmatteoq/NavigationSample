@@ -136,7 +136,6 @@
     </Midl>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Package.appinstaller" />
     <None Include="packages.config" />
     <None Include="PropertySheet.props" />
     <Text Include="readme.txt">
@@ -159,8 +158,10 @@
     <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <GenerateTestArtifacts>True</GenerateTestArtifacts>
-    <AppxBundle>Never</AppxBundle>
+    <AppxBundle>Always</AppxBundle>
     <AppInstallerUri>https://basicreactsample.z16.web.core.windows.net/</AppInstallerUri>
+    <AppxBundlePlatforms>x64</AppxBundlePlatforms>
+    <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
   </PropertyGroup>
   <Import Project="..\..\node_modules\react-native-windows\PropertySheets\Bundle.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
