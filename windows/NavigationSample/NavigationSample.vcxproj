@@ -162,6 +162,7 @@
     <AppInstallerUri>https://basicreactsample.z16.web.core.windows.net/</AppInstallerUri>
     <AppxBundlePlatforms>x64</AppxBundlePlatforms>
     <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
+    <AppInstallerUpdateFrequency>0</AppInstallerUpdateFrequency>
   </PropertyGroup>
   <Import Project="..\..\node_modules\react-native-windows\PropertySheets\Bundle.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
