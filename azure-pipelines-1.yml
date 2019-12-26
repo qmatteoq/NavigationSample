@@ -15,6 +15,7 @@ steps:
 - task: Gradle@2
   inputs:
     gradleWrapperFile: 'gradlew'
+    workingDirectory: '/android/'
     tasks: 'bundleRelease'
     publishJUnitResults: false
     javaHomeOption: 'JDKVersion'
