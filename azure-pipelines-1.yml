@@ -29,6 +29,7 @@ steps:
     apksignerKeystorePassword: '$(KeyStorePassword)'
     apksignerKeystoreAlias: '$(KeyAlias)'
     apksignerKeyPassword: '$(KeyPassword)'
+    zipalign: false
 
 - task: PublishBuildArtifacts@1
   inputs:
