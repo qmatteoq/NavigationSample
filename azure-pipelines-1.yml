@@ -22,13 +22,13 @@ steps:
     gradleOptions: '-Xmx3072m'
     sonarQubeRunAnalysis: false
 
-- task: AndroidSigning@3
-  inputs:
-    apkFiles: '**/*.apk'
-    apksignerKeystoreFile: 'my-upload-key.keystore'
-    apksignerKeystorePassword: '$(KeyStorePassword)'
-    apksignerKeystoreAlias: '$(KeyAlias)'
-    apksignerKeyPassword: '$(KeyPassword)'
+# - task: AndroidSigning@3
+#   inputs:
+#     apkFiles: '**/*.apk'
+#     apksignerKeystoreFile: 'my-upload-key.keystore'
+#     apksignerKeystorePassword: '$(KeyStorePassword)'
+#     apksignerKeystoreAlias: '$(KeyAlias)'
+#     apksignerKeyPassword: '$(KeyPassword)'
 
 - task: PublishBuildArtifacts@1
   inputs:
