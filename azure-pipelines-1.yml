@@ -16,7 +16,7 @@ steps:
   inputs:
     gradleWrapperFile: 'android/gradlew'
     workingDirectory: 'android/'
-    tasks: 'bundleRelease'
+    tasks: 'assembleRelease'
     publishJUnitResults: false
     javaHomeOption: 'JDKVersion'
     gradleOptions: '-Xmx3072m'
