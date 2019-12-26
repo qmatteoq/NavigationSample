@@ -14,7 +14,7 @@ steps:
 - script: yarn install
 - task: Gradle@2
   inputs:
-    gradleWrapperFile: '/windows/gradlew'
+    gradleWrapperFile: 'windows/gradlew'
     workingDirectory: '/android/'
     tasks: 'bundleRelease'
     publishJUnitResults: false
