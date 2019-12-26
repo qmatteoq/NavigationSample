@@ -7,14 +7,14 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'windows-latest'
 
 steps:
 
 - script: yarn install
 - task: Gradle@2
   inputs:
-    gradleWrapperFile: 'gradlew'
+    gradleWrapperFile: 'gradlew.bat'
     workingDirectory: 'android'
     tasks: 'bundleRelease'
     publishJUnitResults: false
