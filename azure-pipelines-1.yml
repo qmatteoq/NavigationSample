@@ -32,6 +32,6 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: 'android/app/build/outputs/apk'
+    PathtoPublish: 'android/app/build/'
     ArtifactName: 'drop'
     publishLocation: 'Container'
