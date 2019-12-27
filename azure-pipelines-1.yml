@@ -12,6 +12,18 @@ pool:
 steps:
 
 - script: yarn install
+
+- task: VersionAndroidManifest@2
+  inputs:
+    Path: '$(Build.SourcesDirectory)'
+    VersionNumber: '$(Build.BuildNumber)'
+    VersionNameFormat: '{1}.{2}'
+    Injectversioncode: true
+    VersionCodeFormat: '{3}'
+    Injectversion: false
+    VersionRegex: '\d+\.\d+\.\d+'
+    FilenamePattern: 'AndroidManifest.xml'
+    OutputVersion: 'OutputedVersion'
 - task: Gradle@2
   inputs:
     gradleWrapperFile: 'android/gradlew'
