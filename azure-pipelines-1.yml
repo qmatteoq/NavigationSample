@@ -9,6 +9,8 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+name: $(date:yyyy).$(Month)$(rev:.r)
+
 steps:
 
 - script: yarn install
