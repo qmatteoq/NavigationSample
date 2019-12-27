@@ -31,7 +31,7 @@ class App extends React.Component {
   return (
     <Fragment>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
+      {/* <SafeAreaView>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
@@ -70,7 +70,8 @@ class App extends React.Component {
             <LearnMoreLinks />
           </View>
         </ScrollView>
-      </SafeAreaView>
+      </SafeAreaView> */}
+      <View>This is an amazing Hello World app!</View>
     </Fragment>
   );
  }
