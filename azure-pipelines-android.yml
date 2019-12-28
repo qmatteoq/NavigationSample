@@ -21,9 +21,7 @@ steps:
     VersionNumber: '$(Build.BuildNumber)'
     VersionNameFormat: '{1}.{2}'
     Injectversioncode: true
-    VersionCodeFormat: '{3}'
-    Injectversion: false
-    VersionRegex: '\d+\.\d+\.\d+'
+    Injectversion: true
     FilenamePattern: 'AndroidManifest.xml'
     OutputVersion: 'OutputedVersion'
 - task: Gradle@2
