@@ -31,7 +31,7 @@ class App extends React.Component {
   return (
     <Fragment>
       <StatusBar barStyle="dark-content" />
-      {/* <SafeAreaView>
+      <SafeAreaView>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
@@ -43,7 +43,7 @@ class App extends React.Component {
           )}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
+              <Text style={styles.sectionTitle}>This is my hello world!</Text>
               <Text style={styles.sectionDescription}>
                 Edit <Text style={styles.highlight}>App.js</Text> to change this
                 screen and then come back to see your edits.
@@ -70,8 +70,7 @@ class App extends React.Component {
             <LearnMoreLinks />
           </View>
         </ScrollView>
-      </SafeAreaView> */}
-      <View>This is an amazing Hello World app!</View>
+      </SafeAreaView>
     </Fragment>
   );
  }
