@@ -10,7 +10,7 @@
   "dependencies": {
     "react": "16.8.6",
     "react-native": "^0.60.0",
-    "react-native-windows": "0.60.0-vnext.96",
+    "react-native-windows": "0.60.0-vnext.106",
     "rnpm-plugin-windows": "^0.3.8"
   },
   "devDependencies": {

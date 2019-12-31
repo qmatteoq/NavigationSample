@@ -4,12 +4,12 @@
 
 
 
-namespace winrt::NavigationSample::implementation
+namespace winrt::navigationsample::implementation
 {
     struct App : AppT<App>
     {
         App() noexcept;
     };
-} // namespace winrt::NavigationSample::implementation
+} // namespace winrt::navigationsample::implementation
 
 

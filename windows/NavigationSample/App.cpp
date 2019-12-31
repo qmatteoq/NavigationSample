@@ -5,8 +5,8 @@
 
 
 
-using namespace winrt::NavigationSample;
-using namespace winrt::NavigationSample::implementation;
+using namespace winrt::navigationsample;
+using namespace winrt::navigationsample::implementation;
 
 /// <summary>
 /// Initializes the singleton application object.  This is the first line of
@@ -15,7 +15,7 @@ using namespace winrt::NavigationSample::implementation;
 /// </summary>
 App::App() noexcept
 {
-    MainComponentName(L"NavigationSample");
+    MainComponentName(L"navigationsample");
 
 #if BUNDLE
     JavaScriptBundleFile(L"index.windows");

@@ -5,9 +5,9 @@
 
 
 
-using namespace winrt::Microsoft::ReactNative::Bridge;
+using namespace winrt::Microsoft::ReactNative;
 
-namespace winrt::NavigationSample::implementation
+namespace winrt::navigationsample::implementation
 {
 
 void ReactPackageProvider::CreatePackage(IReactPackageBuilder const &packageBuilder) noexcept
@@ -15,6 +15,6 @@ void ReactPackageProvider::CreatePackage(IReactPackageBuilder const &packageBuil
     AddAttributedModules(packageBuilder);
 }
 
-} // namespace winrt::NavigationSample::implementation
+} // namespace winrt::navigationsample::implementation
 
 
