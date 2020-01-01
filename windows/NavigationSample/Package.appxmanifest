@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
  <Identity
-    Name="88c69229-561e-4134-9f51-5dfddb166f6d"
-    Publisher="CN=mpagani"
+    Name="ReactNativeSample"
+    Publisher="CN=Matteo Pagani, O=Matteo Pagani, L=Como, S=Como, C=IT"
     Version="1.0.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="88c69229-561e-4134-9f51-5dfddb166f6d" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>navigationsample</DisplayName>
-    <PublisherDisplayName>mpagani</PublisherDisplayName>
+    <DisplayName>React Native Sample</DisplayName>
+    <PublisherDisplayName>Matteo Pagani</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
