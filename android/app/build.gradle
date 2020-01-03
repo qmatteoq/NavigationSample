@@ -131,14 +131,8 @@ android {
         applicationId "com.navigationsample"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        
-        if (project.hasProperty("buildNumber")) {
-            versionName project.buildNumber
-        }
-        else {
-            versionName "1.0"
-        }
+        versionCode 1        
+        versionName project.get("buildNumber", false)
         
         
     }
