@@ -175,6 +175,7 @@ android {
             }
             output.outputFileName = output.outputFileName
                             .replace("app-", "NavigationSample-")
+                            .replace("unsigned", "")
                             .replace(".apk", "-${variant.versionName}.apk")
 
         }
