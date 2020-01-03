@@ -132,8 +132,9 @@ android {
         applicationId "com.navigationsample"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1        
+        versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionName
+        archiveBaseName = "NavigationSample-${android.defaultConfig.versionName}"
     }
     splits {
         abi {
