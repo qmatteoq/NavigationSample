@@ -119,17 +119,6 @@ def jscFlavor = 'org.webkit:android-jsc:+'
  */
 def enableHermes = project.ext.react.get("enableHermes", false);
 
-def getMyVersionCode = { ->
-    def code = project.hasProperty('versionCode') ? versionCode.toInteger() : -1
-    println "VersionCode is set to $code"
-    return code
-}
-
-def getMyVersionName = { ->
-    def name = project.hasProperty('versionName') ? versionName : "1.0"
-    println "VersionName is set to $name"
-    return name
-}
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -144,7 +133,7 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1        
-        versionName getMyVersionName()
+        versionName rootProject.ext.versionName
     }
     splits {
         abi {
