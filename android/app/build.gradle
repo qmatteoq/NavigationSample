@@ -132,8 +132,15 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
-        // versionName "1.0"
-        versionName ${buildNumber}
+        
+        if (project.hasProperty('buildNumber')) {
+            versionName project.buildNumber
+        }
+        else {
+            versionName "1.0"
+        }
+        
+        
     }
     splits {
         abi {
