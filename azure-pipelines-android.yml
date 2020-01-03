@@ -19,7 +19,7 @@ steps:
   inputs:
     gradleWrapperFile: 'android/gradlew'
     workingDirectory: 'android/'
-    options: '-PbuildNumber $(Build.BuildNumber)'
+    options: '-PversionName "$(Build.BuildNumber)"'
     tasks: 'assembleRelease'
     publishJUnitResults: false
     javaHomeOption: 'JDKVersion'
