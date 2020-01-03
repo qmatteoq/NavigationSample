@@ -15,15 +15,6 @@ steps:
 
 - script: yarn install
 
-- task: VersionAndroidManifest@2
-  inputs:
-    Path: '$(Build.SourcesDirectory)'
-    VersionNumber: '$(Build.BuildNumber)'
-    VersionNameFormat: '{1}.{2}'
-    Injectversioncode: true
-    Injectversion: true
-    FilenamePattern: 'AndroidManifest.xml'
-    OutputVersion: 'OutputedVersion'
 - task: Gradle@2
   inputs:
     gradleWrapperFile: 'android/gradlew'
@@ -31,7 +22,7 @@ steps:
     tasks: 'assembleRelease'
     publishJUnitResults: false
     javaHomeOption: 'JDKVersion'
-    gradleOptions: '-Xmx3072m'
+    gradleOptions: '-Xmx3072m -PbuildNumber $(Build.BuildNumber)'
     sonarQubeRunAnalysis: false
 
 - task: AndroidSigning@3

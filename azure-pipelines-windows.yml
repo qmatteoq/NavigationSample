@@ -42,9 +42,6 @@ steps:
     restoreSolution: 'windows/*.sln'
     feedsToUse: 'select'
 
-# - script:  mkdir .\windows\NavigationSample\Bundle
-# - script:  react-native bundle --platform windows --entry-file index.js --bundle-output windows/NavigationSample/Bundle/index.windows.bundle --assets-dest windows/NavigationSample/Bundle
-
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
