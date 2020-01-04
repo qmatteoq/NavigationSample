@@ -20,7 +20,7 @@ steps:
     gradleWrapperFile: 'android/gradlew'
     workingDirectory: 'android/'
     options: '-PversionName=$(Build.BuildNumber) -PversionCode=$(Build.BuildId)'
-    tasks: 'assembleRelease'
+    tasks: 'assembleRelease bundleRelease'
     publishJUnitResults: false
     javaHomeOption: 'JDKVersion'
     gradleOptions: '-Xmx3072m'
@@ -37,6 +37,7 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: 'android/app/build/outputs/apk/release'
+    # PathtoPublish: 'android/app/build/outputs/apk/release'
+    PathtoPublish: 'android/app/build/outputs/'
     ArtifactName: 'drop'
     publishLocation: 'Container'
