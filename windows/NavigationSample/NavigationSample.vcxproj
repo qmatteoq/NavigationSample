@@ -140,6 +140,7 @@
     </Midl>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Matteo Pagani.pfx" />
     <None Include="Package.appinstaller" />
     <None Include="packages.config" />
     <None Include="PropertySheet.props" />
